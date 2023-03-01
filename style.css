@@ -352,6 +352,12 @@ hr{
         align-items: center;
         padding-inline: 1.2rem;
         border-radius: 0 0 .4rem .5rem;
+        
+
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        transition: top 0.3s;
     }
     
     i{
