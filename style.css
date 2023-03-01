@@ -372,7 +372,7 @@ hr{
     }
     
     .navigation{
-        background: rgba(0, 0, 0, 0.954);
+        background: rgba(0, 0, 0, 1);
         color: var(--color);
         position: absolute;
         height: 95svh;
@@ -384,7 +384,15 @@ hr{
         justify-content: space-evenly;
         align-items: center;
         transform: translateX(100%);
-        transition: all 350ms ease-in;
+        transition: all 250ms ease-in;
+    }
+    .navigation a{
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .navigation a:active{
+        background: var(--accent);
+
     }
     .left{
         font-family: 'Lobster', cursive;
@@ -427,9 +435,12 @@ hr{
         background: var(--accent);
         color: var(--color);
         border-radius: 2rem;
-        padding: .6rem;
+        padding: .8rem;
         margin-bottom: var(--margin);
         font-size: .8rem;
+        outline: transparent;
+        border: transparent;
+        cursor: pointer;
     }
     .btn:active{
         transform: translateY(2px);
@@ -506,7 +517,7 @@ hr{
     
     .section-three{
         text-align: left;
-        padding-inline: .8rem;
+        padding-inline: .7rem;
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
@@ -527,17 +538,46 @@ hr{
         /* outline: 1px solid lime; */
         width: 100%;
         display: none;
-        flex-direction: column;
-        padding: 1rem;
+        place-content: center;
+        grid-template-areas: "a a d"
+                             "b c d"
+                             "e e e"
+                             "f g g";
+        padding: .5rem;
+        
+    }
+    .gall img{
+        border-radius: .8rem;
+        margin: .3rem;
+        cursor: pointer;
     }
     
-    img{
-        align-self: flex-start;
-        border-radius: 50%;
+    .gall>*{
+        /* outline: 1px solid magenta; */
     }
-    img:nth-child(2n){
-        align-self: flex-end;
+    .one{
+        grid-area: a;
     }
+    
+    .two{
+        grid-area: b;
+    }
+    .three{
+        grid-area: c;
+    }
+    .four{
+        grid-area: d;
+    }
+    .five{
+        grid-area: e;
+    }
+    .six{
+        grid-area: f;
+    }
+    .seven{
+        grid-area: g;
+    }
+    
     
     .section-four{
         text-align: center;
@@ -586,7 +626,7 @@ hr{
         background: red;
     }
     .gallery-active{
-        display: flex
+        display: grid;
     }
 
 
